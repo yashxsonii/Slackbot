@@ -13,7 +13,7 @@ app.command("/xoxo-ping", async ({ command, ack, respond }) => {
   const start = Date.now();
   await ack();
   const latency = Date.now() - start;
-  await respond({ text: `Pong!\nLatency: ${latency}ms` });
+  await respond({ text: `Pong! :time: \nLatency: ${latency}ms` });
 });
 app.command("/xoxo-catfact", async ({ ack, respond }) => {
   await ack();
@@ -46,6 +46,8 @@ app.command("/xoxo-help", async ({ ack, respond }) => {
     text:
 `Available Commands:
 /xoxo-ping - Check bot latency
+/xoxo-joke - gets you a joke
+/xoxo-help - gets you this window
 /xoxo-catfact - Get a cat fact`
   });
 });
